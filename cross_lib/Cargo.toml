@@ -1,0 +1,15 @@
+[package]
+name = "cross_lib"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+cortex-m-rt = "0.7.3"
+panic-halt = "0.2.0"
+[lib]
+crate-type = ["staticlib"]  
+
+[profile.release]
+panic = "abort"
+lto = true
+codegen-units = 1

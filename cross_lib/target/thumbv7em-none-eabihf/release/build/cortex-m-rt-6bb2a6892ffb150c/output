@@ -1,0 +1,6 @@
+cargo:rustc-cfg=cortex_m
+cargo:rustc-cfg=armv7m
+cargo:rustc-cfg=has_fpu
+cargo:rustc-link-search=C:\Users\Chatha\Desktop\Sharedlib\cross_lib\target\thumbv7em-none-eabihf\release\build\cortex-m-rt-6bb2a6892ffb150c\out
+cargo:rerun-if-changed=build.rs
+cargo:rerun-if-changed=link.x.in

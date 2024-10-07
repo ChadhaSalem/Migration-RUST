@@ -1,0 +1,17 @@
+[package]
+name = "shape_form"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+cortex-m = "0.7.0"
+cortex-m-rt = "0.7.0"
+[lib]
+crate-type = [ "rlib"]   #    vous devrez configurer votre projet pour créer un binaire au lieu d'une bibliothèque.pour genere elftarget = "thumbv7em-none-eabihf"
+
+[profile.release]
+opt-level = 's'  # Optimize for size
+
+[[bin]] # pour genere un fichier binaire 
+name = "shape_form"
+path = "src/lib.rs"

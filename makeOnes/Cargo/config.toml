@@ -1,0 +1,5 @@
+[target.thumbv7em-none-eabihf]
+linker = "arm-none-eabi-gcc"   # Utilisez votre outil de liaison spécifique
+rustflags = [
+  "-C", "link-arg=-Tlinker.ld",  # Spécifiez le fichier de script de liaison
+]

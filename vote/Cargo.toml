@@ -1,0 +1,18 @@
+[package]
+name = "vote"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# qemu = "9.0.0-v0"  # Remplacez par la version appropriée
+
+[profile.release]
+lto = true
+codegen-units = 1
+panic = "abort"
+opt-level = "s"
+linker = "rust-lld"  # Ou le nom de votre linker si nécessaire
+
+[[bin]]  # pour générer un fichier binaire
+name = "vote"
+path = "src/lib.rs"  # Changez cela en "src/main.rs" si c'est un binaire

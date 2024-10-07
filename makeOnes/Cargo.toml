@@ -1,0 +1,18 @@
+[package]
+name = "make_ones"
+version = "0.1.0"
+edition = "2021"
+
+
+[dependencies]
+cortex-m = "0.7.0"
+cortex-m-rt = "0.7.0"
+[lib]
+crate-type = ["cdylib", "rlib"]   #    vous devrez configurer votre projet pour créer un binaire au lieu d'une bibliothèque.pour genere elftarget = "thumbv7em-none-eabihf"
+
+[profile.release]
+opt-level = 's'  # Optimize for size
+
+[[bin]] # pour genere un fichier binaire 
+name = "make_ones"
+path = "src/lib.rs"
